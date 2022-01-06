@@ -1,0 +1,97 @@
+/* ********************
+    Google Fonts
+******************** */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@700&display=swap');
+
+/* ********************
+    Custom Properties
+******************** */
+
+:root{
+    /* Colors */
+    --color-yellow: #FCB72B;
+    --color-dimYellow: rgba(252, 183, 43, .15);
+    --color-darkNavy: #495567;
+    --color-dimGray: #939CAA;
+    --color-lightGray: #E5ECF4;
+    --color-snow: #F2F5F9;
+    --color-lightYellow: #FFF4DF;
+    --color-white: #fff;
+    --color-darkGray: #333A44;
+
+    /* Fonts and Typography */
+
+    // Font Family
+    --ff-primary: 'Space Mono', sans-serif;
+    --ff-secondary: 'Lexend Deca', sans-serif;
+
+    // Font Size
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.25rem;
+    --fs-normal: .9375rem;
+    --fs-medium: 1.125rem;
+    --fs-large: 1.5rem;
+
+    @include breakpoint-up(medium){
+        --fs-h1: 3.5rem;
+        --fs-h2: 3rem;
+        --fs-h3: 2.5rem;
+        --fs-h4: 1.5rem;
+        --fs-normal: .9375rem;
+        --fs-medium: 1.5rem;
+        --fs-large: 1.5rem;
+    }
+
+    // Font Weight
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    // Line Height
+    --lh-h1: 2.5rem;
+    --lh-h2: 2rem;
+    --lh-h3: 1.75rem;
+    --lh-h4: 1.5rem;
+    --lh-body: 1.5625rem;
+
+    @include breakpoint-up(medium){
+        --lh-h1: 3.5rem;
+        --lh-h2: 3rem;
+        --lh-h3: 3rem;
+        --lh-h4: 1.75rem;
+        --lh-body: 1.5625rem;
+    }
+
+    // Letter Spacing
+    --ls-h1: -.111875rem;
+    --ls-h2: -.089375rem;
+    --ls-h3: -.066875rem;
+    --ls-h4: -.066875rem;
+
+    @include breakpoint-up(medium){
+        --ls-h1: -.15625rem;
+        --ls-h2: -.13375rem;
+        --ls-h3: -.111875rem;
+        --ls-h4: -.066875rem;
+    }
+
+    /* Z Index */
+
+    --z-back: -1;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /* Box Shadow */
+    --bxs-header: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+
+    /* Others */
+
+    --header-height: 4rem;
+
+    @include breakpoint-up(medium){
+        --header-height: 6rem;
+    }
+}

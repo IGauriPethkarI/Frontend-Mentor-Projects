@@ -1,0 +1,31 @@
+/* ********************
+    Utilites
+******************** */
+
+.hide-for-mobile{
+    @include breakpoint-down(small){
+        display: none !important;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none !important;
+    }
+}
+
+.hide-for-tablet-and-up{
+    @include breakpoint-up(medium){
+        display: none !important;
+    }
+}
+
+.hide-for-tablet-and-down{
+    @include breakpoint-down(medium){
+        display: none !important;
+    }
+}
+
+.showMenu{
+    left: 0 !important;
+}

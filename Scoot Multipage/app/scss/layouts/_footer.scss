@@ -1,0 +1,94 @@
+/* ********************
+    Footer Styles
+******************** */
+
+.footer{
+    background-color: var(--color-darkGray);
+    color: var(--color-dimGray);
+    
+    @include breakpoint-down(small){
+        @include flex(c, c, column);
+        text-align: center;
+    }
+
+    @include flex(sb, c, row);
+
+    .wrapper{
+        padding: 4rem 0 5.5rem;
+
+        @include breakpoint-up(medium){
+            padding: 2rem 2.4375rem;
+        }
+
+        @include breakpoint-up(large){
+            padding: 2rem;
+        }
+    }
+    
+    .nav{
+        @include breakpoint-up(medium){
+            @include flex(sb, c, row);
+        }
+
+        &__logo{
+            display: block;
+            max-width: 4.71875rem;
+            margin: 0 auto;
+            @include breakpoint-up(medium){
+                max-width: 6.75rem;
+            }
+
+            @include breakpoint-down(small){
+                margin-bottom: 2.5rem;
+            }
+
+            @include breakpoint-up(medium){
+                margin-right: 3.625rem;
+            }
+        }
+
+        &__list{
+            @include breakpoint-down(small){
+                margin-bottom: 5.3125rem;
+            }
+
+            @include breakpoint-up(medium){
+                @include flex(fs, c, row);
+            }
+        }
+
+        &__item{
+            @include breakpoint-down(small){
+                margin-bottom: 1rem;
+            }
+
+            @include breakpoint-up(medium){
+                margin-right: 2rem;
+            }
+
+            &:hover{
+                color: var(--color-yellow);
+            }
+        }
+
+    }
+    .social{
+        @include flex(sb, c, row);
+        &__item{
+            :hover{
+                svg{
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+
+            &:not(:last-of-type){
+                margin-right: 1.5rem;
+
+            }
+            @include breakpoint-up(medium){
+            }
+        }
+    }
+}

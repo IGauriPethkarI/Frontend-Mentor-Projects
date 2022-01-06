@@ -1,0 +1,52 @@
+/* ********************
+    Section Styles
+******************** */
+
+.signup{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--color-darkNavy);
+    color: var(--color-white);
+
+    @include breakpoint-up(large){
+        text-align: initial;
+        @include flex(sb, c, row);
+    }
+
+    .wrapper{
+        padding: 5.5rem 2rem;
+        
+        @include breakpoint-up(medium){
+            padding: 3.875rem 2rem;
+        }
+
+        @include breakpoint-up(large){
+            padding: 6.375rem 2rem;
+        }
+    }
+    
+    &__text-container{
+        max-width: 28.5625rem;
+        margin: 0 auto;
+        margin-bottom: 2.5rem;
+
+        @include breakpoint-up(large){
+            margin: initial;
+        }
+    }
+
+    .shape{
+        position: absolute;
+
+        &--circles{
+            width: 1158px;
+            height: 158px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../../assets/patterns/semi-circles.svg);
+            bottom: 0;
+            right: calc((1158px * .14076) * -1);
+        }
+    }
+}

@@ -1,0 +1,49 @@
+/* ********************
+    Resets
+******************** */
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin-top: var(--header-height);
+    overflow-x: hidden;
+}
+
+ul,
+ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: inherit;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+details{
+    cursor: pointer;
+}

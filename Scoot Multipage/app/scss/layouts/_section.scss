@@ -1,0 +1,123 @@
+/* ********************
+    Section Styles
+******************** */
+
+.section{
+    @include flex(c, c, column);
+    position: relative;
+    overflow: hidden;
+
+    &:not(:last-of-type){
+        margin-bottom: 7.5rem;
+
+        @include breakpoint-up(large){
+            margin-bottom: 10rem;
+        }
+    }
+
+    @include breakpoint-up(large){
+        @include flex(sb, c, row);
+    }
+
+    &--right{
+        .shape{
+            position: absolute;
+            &--circle{
+                width: 27.8125rem;
+                height: 27.8125rem;
+                background-size: contain;
+                background-image: url(../../assets/patterns/circle.svg);
+                right: calc((27.8125rem * .7865) * -1);
+                top: 0;
+                z-index: var(--z-back);
+            }
+        }
+    }
+
+    &--left{
+        .shape{
+            position: absolute;
+            &--circle{
+                width: 27.8125rem;
+                height: 27.8125rem;
+                background-size: contain;
+                background-image: url(../../assets/patterns/circle.svg);
+                left: calc((27.8125rem * .7865) * -1);
+                top: 0;
+                z-index: var(--z-back);
+            }
+        }
+    }
+
+    .wrapper{
+        padding: 0 2rem;
+
+        @include breakpoint-up(medium){
+            padding: 0 6rem;
+        }
+
+        @include breakpoint-up(large){
+            padding: 0 2rem;
+        }
+    }
+
+    &__text-container{
+        order: 2;
+        text-align: center;
+        max-width: 35.8125rem;
+        
+        > *:not(:last-child){
+            margin-bottom: 2rem;
+        }
+        
+        @include breakpoint-up(medium){
+            
+            > *:not(:last-child){
+                margin-bottom: 2.5rem;
+            }
+        }
+        
+        @include breakpoint-up(large){
+            order: initial;
+            text-align: initial;
+            max-width: 27.8125rem;
+            padding-right: .5rem;
+
+            > *:not(:last-child){
+                margin-bottom: initial;
+            }
+        }
+
+        .heading{
+            color: var(--color-darkNavy);
+
+            @include breakpoint-up(large){
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        .paragraph{
+            color: var(--color-dimGray);
+
+            @include breakpoint-up(large){
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+    &__image-container{
+        position: relative;
+        order: 1;
+        margin-bottom: 3.5rem;
+        max-width: 27.8125rem;
+
+        @include breakpoint-up(large){
+            order: initial;
+            margin-bottom: initial;
+        }
+        
+        img{
+            border-radius: 50%;
+        }
+    }
+}
